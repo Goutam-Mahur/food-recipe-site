@@ -4,7 +4,7 @@ A simple React application that allows users to search for food items and view t
 
 This application is deployed on Netlify. You can access it at:
 
-**[Food Search App on Netlify](https://food-recipe-site.netlify.app)**
+**[Food Search App on Netlify](https://food-recipe-site01.netlify.app)**
 
 ## Features
 

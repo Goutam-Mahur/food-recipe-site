@@ -129,17 +129,14 @@ export default function Navbar() {
         </ul>
       </div>
 
-      <form
-        onSubmit={handleSubmit}
-        className="flex justify-center items-center md:hidden"
-      >
+      <form onSubmit={handleSubmit} className="w-full md:hidden">
         <input
           type="text"
           name="search"
           value={search}
           onChange={(event) => setSearch(event.target.value)}
           placeholder="Enter food name..."
-          className="bg-white/75 p-3 px-8 rounded-full outline-none w-[50%] h-full shadow-lg shadow-red-100 focus:shadow-red-200"
+          className="bg-white/75 p-3 px-4 rounded-full outline-none w-full h-full shadow-lg shadow-red-100 focus:shadow-red-200"
         />
       </form>
     </div>

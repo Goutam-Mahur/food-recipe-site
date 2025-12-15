@@ -28,8 +28,9 @@ export default function GlobalState({ children }) {
     navigate("/");
     setLoading(true);
     try {
+      const query = search.trim() || "mango";
       const response = await fetch(
-        `https://forkify-api.herokuapp.com/api/v2/recipes?search=${search}`
+        `https://forkify-api.herokuapp.com/api/v2/recipes?search=${query}`,
       );
 
       const data = await response.json();
@@ -45,6 +46,10 @@ export default function GlobalState({ children }) {
       setSearch("");
     }
   };
+
+  useEffect(() => {
+    handleSubmit({ preventDefault: () => {} });
+  }, []);
   return (
     <GlobalContext.Provider
       value={{
